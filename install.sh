@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "This will set up DWM."
-pacman -S --noconfirm ttf-font-awesome ttf-fira-code xorg xorg-xinit feh scrot gcr terminus-font ttf-jetbrains-mono ttf-nerd-fonts-symbols
+pacman -S --noconfirm ttf-font-awesome ttf-fira-code xorg xorg-xinit feh scrot gcr gtk3 gtk2 terminus-font ttf-jetbrains-mono ttf-nerd-fonts-symbols
 sleep 2s
 mv dwm ..
 mv dmenu ..
