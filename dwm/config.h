@@ -69,6 +69,8 @@ static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont,
 static const char *monitor[] = { "/usr/bin/htop", NULL };
 //sets st as the default terminal
 static const char *termcmd[]  = { "st", NULL };
+static const char *browcmd[]  = { "firefox", NULL };
+static const char *tgcmd[]    = { "telegram-desktop", NULL };
 //sets urxvt as the default terminal
 //static const char *termcmd[]  = { "urxvt", NULL };
 //volume controls
@@ -79,9 +81,11 @@ static const char *mutevol[] = { "amixer", "-q", "set", "Master", "toggle", NULL
 #include "shiftview.c"
 static char *endx[] = { "/bin/sh", "-c", "endx", "externalpipe", NULL };
 static Key keys[] = {
-	/* modifier                     key        function        argument */
+	/* modifier                     key        function       argument */
 	{ MODKEY,                       XK_d,      spawn,          {.v = dmenucmd } },
 	{ MODKEY,	                XK_Return, spawn,          {.v = termcmd } },
+	{ MODKEY,                       XK_w,      spawn,          {.v = browcmd } },
+	{ MODKEY,                       XK_F1,     spawn,          {.v = tgcmd } },
 	{ MODKEY,                       XK_t,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
